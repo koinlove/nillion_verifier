@@ -55,7 +55,17 @@ docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-e
 ![image](https://github.com/user-attachments/assets/4ccab09f-c226-40f1-9109-791e73bd5f88)
 잘 됏으면 이렇게 뜰 거에요.
 
-터미널 그대로 종료하면 끝.
+10분 기다리라는 거 보이시죠? 10분 기다리셈 ㅋㅋ
+
+![image](https://github.com/user-attachments/assets/0495103c-910c-4e68-80e4-5fd9db6909a4)
+10분 기다리면 이렇게 떠용 ㅋ
+이후에 터미널은 아예 종료하시고, 다시 접속하고 싶으면 다시 접속하세염.
+
+![image](https://github.com/user-attachments/assets/24b3dab2-7bd2-423c-84f6-d72e5a1319b2)
+켜지기까지 하면 이렇게 update now 빨간색으로 안 뜨고 ETH 스테이크 하라고 뜬답니다~^^
+(하든 말든 알아서 하셔요.)
+
+참고로 
 
 ## 잘 돌아가는지 확인하는 법
 [링크](https://testnet.nillion.explorers.guru/)로 들어가서, 님의 지갑주소로 검색하면 됩니다. 
