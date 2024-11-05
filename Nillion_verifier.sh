@@ -66,19 +66,16 @@ mkdir -p nillion/accuser
 echo -e "${CYAN}running nillion-accuser docker${NC}"
 docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 initialise
 
-echo -e
-cat ~/nillion/verifier/credential.json
-
 echo -e "${BOLD}${YELLOW}1.방문하세요: https://verifier.nillion.com/ (CTRL 누른 상태에서 마우스 클릭하면 들어가짐).${NC}"
 echo -e "${BOLD}${YELLOW}2. 우측 상단에 있는 'connect Keplr Wallet' 클릭해서 로그인하기.${NC}"
 echo -e "${BOLD}${YELLOW}3. https://faucet.testnet.nillion.com/ 여기 들어가서 1) 내가 홈페이지에 연결한 지갑 2) 방금 명령어로 만들어진 지갑에 Faucet 받기${NC}"
 echo -e "${BOLD}${YELLOW}4. 1시간 뒤에 명령어 다시 실행해서 2번 실행할 때 만나요 ㅎㅎ.${NC}"
 
 echo -ne "${MAGENTA}위의 과정을 다 하셨을까욤?${NC} [y/n] :"
-read -p response
+read -e response
 if [[ "$response" =~ ^[yY]$ ]]; then
     echo -e "${BOLD}${CYAN}이제부터 도커를 다시 가동할 건데, 제대로 등록이 됐는지 확인하는 작업임.${NC}"
-	echo -e "${BOLD}${YELLOW}꼭! 무조건! Verifier registered to : 이런 식으로 뜬다면 잘 된 거니,'Ctrl + C'를 3번 연달아 눌러 로그를 끄세요~(잠깐만 기다려봐)${NC}"
+	echo -e "${BOLD}${YELLOW}꼭! 무조건! Verifier registered to : 이런 식으로 뜬다면 잘 된 거니 터미널을 그대로 끄세요~${NC}"
 	sleep 5
 	docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
 	
