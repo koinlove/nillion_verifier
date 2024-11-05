@@ -69,7 +69,6 @@ docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 initialise
 echo -e "${BOLD}${YELLOW}1.방문하세요: https://verifier.nillion.com/ (CTRL 누른 상태에서 마우스 클릭하면 들어가짐).${NC}"
 echo -e "${BOLD}${YELLOW}2. 우측 상단에 있는 'connect Keplr Wallet' 클릭해서 로그인하기.${NC}"
 echo -e "${BOLD}${YELLOW}3. https://faucet.testnet.nillion.com/ 여기 들어가서 1) 내가 홈페이지에 연결한 지갑 2) 방금 명령어로 만들어진 지갑에 Faucet 받기${NC}"
-echo -e "${BOLD}${YELLOW}4. 1시간 뒤에 명령어 다시 실행해서 2번 실행할 때 만나요 ㅎㅎ.${NC}"
 
 echo -ne "${MAGENTA}위의 과정을 다 하셨을까욤?${NC} [y/n] :"
 read -e response
