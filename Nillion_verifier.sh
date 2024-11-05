@@ -58,30 +58,30 @@ echo -e "${CYAN}docker version${NC}"
 docker version
 
 echo -e "${CYAN}installing nillion-accuser images...${NC}"
-docker pull nillion/retailtoken-accuser:v1.0.1
+docker pull nillion/verifier:v1.0.1
 
 echo -e "${CYAN}making accuser directory...${NC}"
 mkdir -p nillion/accuser
 
 echo -e "${CYAN}running nillion-accuser docker${NC}"
-docker run -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:v1.0.1 initialise
+docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 initialise
+
+echo -e
+cat ~/nillion/verifier/credential.json
 
 echo -e "${BOLD}${YELLOW}1.방문하세요: https://verifier.nillion.com/ (CTRL 누른 상태에서 마우스 클릭하면 들어가짐).${NC}"
 echo -e "${BOLD}${YELLOW}2. 우측 상단에 있는 'connect Keplr Wallet' 클릭해서 로그인하기.${NC}"
 echo -e "${BOLD}${YELLOW}3. https://faucet.testnet.nillion.com/ 여기 들어가서 1) 내가 홈페이지에 연결한 지갑 2) 방금 명령어로 만들어진 지갑에 Faucet 받기${NC}"
 echo -e "${BOLD}${YELLOW}4. 1시간 뒤에 명령어 다시 실행해서 2번 실행할 때 만나요 ㅎㅎ.${NC}"
-}
-
-verify_nillion() {
 
 echo -ne "${MAGENTA}위의 과정을 다 하셨을까욤?${NC} [y/n] :"
 read -p response
 if [[ "$response" =~ ^[yY]$ ]]; then
-    echo -e "${BOLD}${CYAN}업데이트 중...${NC}"
-    sudo apt update -y
-    echo -e "${BOLD}${CYAN}이제부터 뭔 일이 일어날 텐데, CTRL + C '세 번' 누르면 꺼질 거임.${NC}"
-	sudo docker run -v ./nillion/accuser:/var/tmp nillion/retailtoken-accuser:latest accuse --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com/" --block-start "$(curl -s https://testnet-nillion-rpc.lavenderfive.com/abci_info | jq -r '.result.response.last_block_height')"
-
+    echo -e "${BOLD}${CYAN}이제부터 도커를 다시 가동할 건데, 제대로 등록이 됐는지 확인하는 작업임.${NC}"
+	echo -e "${BOLD}${YELLOW}꼭! 무조건! Verifier registered to : 이런 식으로 뜬다면 잘 된 거니,'Ctrl + C'를 3번 연달아 눌러 로그를 끄세요~(잠깐만 기다려봐)${NC}"
+	sleep 5
+	docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-endpoint "https://testnet-nillion-rpc.lavenderfive.com"
+	
 else
 	echo -e "${RED}${BOLD}아${NC}"
 	echo -e "${YELLOW}${BOLD}니${NC}"
@@ -116,6 +116,8 @@ docker ps -a | grep nillion | awk '{print $1}' | xargs docker rm
 
 docker rmi `docker images | awk '$1 ~ /nillion/ {print $1, $3}'`
 
+sudo rm -rf ~/nillion
+
 echo -e "${CYAN}다 됐어욤.${NC}"
 }
 
@@ -124,9 +126,8 @@ echo && echo -e "${BOLD}${MAGENTA}nillion accuser 노드 자동 설치 스크립
  ${CYAN}원하는 거 고르시고 실행하시고 그러세효. ${NC}
  ———————————————————————
  ${GREEN} 1. 기본파일 설치 및 nillion 실행 ${NC}
- ${GREEN} 2. nillion 인증받기 ${NC}
- ${GREEN} 3. nillion 재시작하기 ${NC}
- ${GREEN} 4. nillion 삭제하기. ${NC}
+ ${GREEN} 2. nillion 재시작하기 ${NC}
+ ${GREEN} 3. nillion 삭제하기. ${NC}
  ———————————————————————" && echo
 
 # 사용자 입력 대기
@@ -138,12 +139,9 @@ case "$num" in
     install_nillion
     ;;
 2)
-    verify_nillion
-    ;;
-3)
     restart_nillion
     ;;
-4)
+3)
     uninstall_nillion
     ;;
 *)
