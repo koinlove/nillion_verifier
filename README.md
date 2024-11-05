@@ -71,7 +71,10 @@ docker run -v ./nillion/verifier:/var/tmp nillion/verifier:v1.0.1 verify --rpc-e
 [링크](https://testnet.nillion.explorers.guru/)로 들어가서, 님의 지갑주소로 검색하면 됩니다. 
 
 ## 내 노드 지갑 다시 확인하는 법
-처음에 잘 저장하셨어야죠 ㅉ;
+```bash
+cat ~/nillion/verifier/credentials.json
+```
+입력하시면 순서대로 1)priv_key 2)pubkey 3)address 뜨실 텐데, 2번이랑 3번이 중요한 거니까 그거 가지고 게셈ㅎ;
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1a0c1720-ea10-484e-b443-37099e9d21ba" alt="2222" width="500" />
