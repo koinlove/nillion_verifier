@@ -1,15 +1,19 @@
-![image](https://github.com/user-attachments/assets/cb8ae71c-7f86-4255-874d-c6a37f1f9e8c)# Nillion Verifier 노드? 암튼 머시기 돌리는 법
+# Nillion Verifier 노드? 암튼 머시기 돌리는 법
 >## 준비할 것
 ![image](https://github.com/user-attachments/assets/1ab58b9b-7877-4277-94dc-5a7ac7febfb2)
+
 먼저 님의 Keplr를 켜서 새로운 지갑을 추가한다. 
 
 ![image](https://github.com/user-attachments/assets/ee9df66a-44f3-4ab1-ac3d-0f1eab5a296c)
+
 대충 이거 눌러서 새로운 복구구문 생성, 아예 새로운 지갑으로 만들기.
 
 ![image](https://github.com/user-attachments/assets/b1a43009-5855-4a1d-a43b-5a6afa0a5472)
+
 이런 식으로... 
 
 ![image](https://github.com/user-attachments/assets/bcc2f3e7-442a-45b7-be72-b4aa2e5ecb92)
+
 이렇게 네트워크까지 추가했다면 완료!
 
 암튼 이렇게 지갑까지 준비했다면 끝~
