@@ -32,7 +32,7 @@ verifier publickey는 프라이빗키! 모두 어딘가에 저장해 두기.
 [링크](https://faucet.testnet.nillion.com/)로 들어가서 'nillion'으로 시작하는 1) 내가 처음에 생성한 지갑과 2) 노드에 생긴 지갑으로 모두 퍼셋을 받기(꼭!)
 
 ![image](https://github.com/user-attachments/assets/6f2deeb3-d0c7-4fcb-9c34-abbc057c1ee9)
-이제 홈페이지를 들어가서 지갑을 연결하기
+이제 [홈페이지](https://verifier.nillion.com/)를 들어가서 지갑을 연결하기
 
 ![image](https://github.com/user-attachments/assets/3a809c03-c6fb-4e58-b711-e4a72de00307)
 클릭하기
