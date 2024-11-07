@@ -19,7 +19,7 @@
 암튼 이렇게 지갑까지 준비했다면 끝~
 ## 노드 설치 스크립트
 ```bash
-[ -f "Nillion_verifier.sh" ] && rm Nillion_verifier.sh; wget -q https://raw.githubusercontent.com/byonjuk/nillion_verifier/refs/heads/main/Nillion_verifier.sh && chmod +x Nillion_verifier.sh && ./Nillion_verifier.sh
+[ -f "Nillion_verifier.sh" ] && rm Nillion_verifier.sh; wget -q https://raw.githubusercontent.com/koinlove/nillion_verifier/refs/heads/main/Nillion_verifier.sh && chmod +x Nillion_verifier.sh && ./Nillion_verifier.sh
 ```
 이 명령어를 복붙하면
 ![image](https://github.com/user-attachments/assets/a8d32b02-f728-4d4c-81bf-340a1b6ce54a)
@@ -76,7 +76,4 @@ cat ~/nillion/verifier/credentials.json
 ```
 입력하시면 순서대로 1)priv_key 2)pubkey 3)address 뜨실 텐데, 2번이랑 3번이 중요한 거니까 그거 가지고 게셈ㅎ;
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1a0c1720-ea10-484e-b443-37099e9d21ba" alt="2222" width="500" />
-</p>
 그럼 안녕.
