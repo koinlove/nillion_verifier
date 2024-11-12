@@ -22,7 +22,7 @@
 [ -f "Nillion_verifier.sh" ] && rm Nillion_verifier.sh; wget -q https://raw.githubusercontent.com/koinlove/nillion_verifier/refs/heads/main/Nillion_verifier.sh && chmod +x Nillion_verifier.sh && ./Nillion_verifier.sh
 ```
 이 명령어를 복붙하면
-![image](https://github.com/user-attachments/assets/a8d32b02-f728-4d4c-81bf-340a1b6ce54a)
+![image](https://github.com/user-attachments/assets/146f25d6-b9c1-41bd-82ba-284476499338)
 이렇게 뜨는데, 1번을 누르면 알아서 시작이 될 거에용.
 
 ![image](https://github.com/user-attachments/assets/e24f3992-b2c7-42f7-b773-4554ab9208aa)
