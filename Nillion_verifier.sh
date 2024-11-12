@@ -118,7 +118,7 @@ echo -e "${CYAN}다 됐어욤.${NC}"
 }
 
 # 메인 메뉴
-echo && echo -e "${BOLD}${MAGENTA}nillion accuser 노드 자동 설치 스크립트${NC} by 비욘세제발죽어
+echo && echo -e "${BOLD}${MAGENTA}nillion accuser 노드 자동 설치 스크립트${NC} by 코인러브미순
  ${CYAN}원하는 거 고르시고 실행하시고 그러세효. ${NC}
  ———————————————————————
  ${GREEN} 1. 기본파일 설치 및 nillion 실행 ${NC}
