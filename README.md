@@ -1,4 +1,4 @@
-# Nillion Verifier 노드? 암튼 머시기 돌리는 법
+# Nillion Verifier 노드 (끝났습니다!!!!)
 >## 준비할 것
 ![image](https://github.com/user-attachments/assets/1ab58b9b-7877-4277-94dc-5a7ac7febfb2)
 
