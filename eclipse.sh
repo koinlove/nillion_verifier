@@ -55,10 +55,11 @@ curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev 
 echo -e "${BOLD}${CYAN} 솔라나 지갑을 생성하겠습니다. 님의 노드 채굴 지갑이니까 잘 저장해 두세욤.${NC}"
 solana-keygen new
 
-echo -e "${BOLD}${CYAN} 여기다 돈 좀 넣어두삼. 0.005 이더리움정도.. 이클립스 메인넷으로 넣어야 됨. ${NC}"
+echo -e "${BOLD}${CYAN} 위의 seed phrase는 가짜임. 님의 진짜 프라이빗키를 알려주겠음.. ${NC}"
+private_key=$(cat ~/.config/solana/id.json)
 
-echo -e "${BOLD}${CYAN} 1분의 시간을 주겠음. ${NC}"
-sleep 60
+echo -e "${BOLD}${CYAN}님의 프라이빗키 : ${NC}${YELLOW}$private_key${NC}"
+echo -e "${CYAN}이거 숫자 [123.345.34341.34] 이런 식으로 되어 있는데, 이거 []까지 복사해서 프빗키에 박아 쳐 넣으셈. 그럼 제대로 뜸. 이 씨발 병신같은 년들은 파이썬 디코딩 하나 쳐 못해서 이런 좆버러지같은 짓을 하고 지랄임 ㅄ같은년들 죽었으면 시발 애미애비 다 도륙내고싶네이거만든병신새끼"
 
 echo -e "${BOLD}${CYAN} 이제 채굴기 설치할게요~ 오래걸림 ${NC}"
 cargo install bitz
