@@ -65,7 +65,7 @@ echo -e "${BOLD}${CYAN} 이제 채굴기 설치할게요~ 오래걸림 ${NC}"
 cargo install bitz
 
 echo -e "${BOLD}${CYAN} 노드의 RPC를 이클립스 메인넷으로 설정할게욤 ${NC}"
-solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
+solana config set --url https://eclipse.helius-rpc.com/
 
 echo -e "${BOLD}${CYAN}이제 스크린 켜서 관리하삼. [screen -S eclipse] 입력 후 [bitz collect] 시작${NC}"
 }
