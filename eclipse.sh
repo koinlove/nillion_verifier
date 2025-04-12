@@ -51,6 +51,8 @@ source $HOME/.cargo/env
 echo -e "${BOLD}${CYAN} 솔라나 클라이언트 설치합니다*지갑 생성*${NC}"
 echo -e "${BOLD}${RED}오래 걸리니까 기다려 주세요${NC} ${MAGENTA}♥${NC}"
 curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
+
+source $HOME/bashrc.
 echo -e "${BOLD}${RED}터미널 껐다가 재접속해 이 시발년들아 껐다 켜서 2번 눌러 시발${NC} ${MAGENTA}♥${NC}"
 }
 
