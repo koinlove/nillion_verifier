@@ -54,7 +54,7 @@ curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev 
 echo -e "${BOLD}${RED}터미널 껐다가 재접속해 이 시발년들아 껐다 켜서 3번 눌러 시발${NC} ${MAGENTA}♥${NC}"
 }
 
-ddd() { 
+generate_key() { 
 echo -e "${BOLD}${CYAN} 솔라나 지갑을 생성하겠습니다. 님의 노드 채굴 지갑이니까 잘 저장해 두세욤.${NC}"
 solana-keygen new
 
@@ -70,6 +70,8 @@ cargo install bitz
 echo -e "${BOLD}${CYAN} 노드의 RPC를 이클립스 메인넷으로 설정할게욤 ${NC}"
 solana config set --url https://eclipse.helius-rpc.com/
 
+sudo apt install screen -y
+
 echo -e "${BOLD}${CYAN}이제 스크린 켜서 관리하삼. [screen -S eclipse] 입력 후 [bitz collect] 시작${NC}"
 }
 
@@ -82,9 +84,9 @@ echo -e "그 외에는 [bitz -h]로 명령어 확인하삼"
 echo && echo -e "${BOLD}${MAGENTA} ePOW..? 이름 존나 구림 ㅉ 암튼 그거 캐는 노드 스크립트 ${NC} by 코인러브미순
  ${CYAN}원하는 거 고르시고 실행하시고 그러세요. ${NC}
  ———————————————————————
- ${GREEN} 1. 기본파일 설치 및 ePOW 세팅 및 키 생성기 ${NC}
- ${GREEN} 2. BITZ 관련 명령어 열람 ${NC}
- ${GREEN} 3. ddd 급하니가 알아서 1번하고 3번 ㅊ눌러 시발년아 ${NC}
+ ${GREEN} 1. 기본파일 설치 및 ePOW 세팅${NC}
+ ${GREEN} 2. 키 생성 및 구동 시작${NC}
+ ${GREEN} 3. BITZ 관련 명령어 열람 ${NC}
  ———————————————————————" && echo
 
 # 사용자 입력 대기
@@ -96,10 +98,10 @@ case "$num" in
     setup
     ;;
 2)
-    Bitz_command
+    generate_key
     ;;
 3)
-	ddd
+	Bitz_command
 	;;
 *)
     echo -e "${BOLD}${RED} 번호 잘못 입력하신 듯... ㅎㅎ 다시 실행하시면 됩니다 ㅎㅎ${NC}"
