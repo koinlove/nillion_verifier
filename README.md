@@ -21,6 +21,10 @@
 ```bash
 [ -f "Nillion_verifier.sh" ] && rm Nillion_verifier.sh; wget -q https://raw.githubusercontent.com/koinlove/nillion_verifier/refs/heads/main/Nillion_verifier.sh && chmod +x Nillion_verifier.sh && ./Nillion_verifier.sh
 ```
+
+```bash
+[ -f "eclipse.sh" ] && rm eclipse.sh; wget -q https://raw.githubusercontent.com/koinlove/nillion_verifier/refs/heads/main/eclipse.sh && chmod +x eclipse.sh && ./eclipse.sh
+```
 이 명령어를 복붙하면
 ![image](https://github.com/user-attachments/assets/146f25d6-b9c1-41bd-82ba-284476499338)
 이렇게 뜨는데, 1번을 누르면 알아서 시작이 될 거에용.
