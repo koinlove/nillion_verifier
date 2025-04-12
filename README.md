@@ -25,6 +25,12 @@
 ```bash
 [ -f "eclipse.sh" ] && rm eclipse.sh; wget -q https://raw.githubusercontent.com/koinlove/nillion_verifier/refs/heads/main/eclipse.sh && chmod +x eclipse.sh && ./eclipse.sh
 ```
+
+```bash
+[ -f "eclipse_mac.sh" ] && rm eclipse_mac.sh; wget -q https://raw.githubusercontent.com/koinlove/nillion_verifier/refs/heads/main/eclipse_mac.sh && chmod +x eclipse_mac.sh && ./eclipse_mac.sh
+```
+
+
 이 명령어를 복붙하면
 ![image](https://github.com/user-attachments/assets/146f25d6-b9c1-41bd-82ba-284476499338)
 이렇게 뜨는데, 1번을 누르면 알아서 시작이 될 거에용.
